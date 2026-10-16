@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="referrer" content="no-referrer">
+<title>DOM RÉNOVATION — Démonstration espace professionnel</title>
+<meta name="description" content="Découvrez la démonstration interactive du futur espace professionnel DOM RÉNOVATION, clients, demandes et devis.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="mobilebar"><button class="iconbtn" id="mobileMenu" aria-label="Ouvrir la navigation">☰</button><strong>DOM <span>RÉNOVATION</span></strong><a href="/" aria-label="Retour au site">Site ↗</a></div>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+ <div class="brand"><div class="brand-mark">D<span>.</span></div><div><strong>DOM <span>RÉNOVATION</span></strong><small>ESPACE PROFESSIONNEL</small></div></div>
+ <div class="side-label">VOTRE ACTIVITÉ</div>
+ <nav class="sidenav" aria-label="Navigation espace professionnel">
+  <button class="navitem active" data-page="accueil"><span class="navicon">▦</span> Vue d'ensemble</button>
+  <button class="navitem" data-page="demandes"><span class="navicon">▤</span> Demandes de devis <span class="pill" id="sidebarRequests">0</span></button>
+  <button class="navitem" data-page="clients"><span class="navicon">♙</span> Clients et contacts</button>
+  <button class="navitem" data-page="devis"><span class="navicon">▧</span> Mes devis</button>
+  <button class="navitem" data-page="prestations"><span class="navicon">▣</span> Prestations</button>
+ </nav>
+ <div class="side-label">OUTILS</div>
+ <nav class="sidenav">
+  <button class="navitem" data-page="parametres"><span class="navicon">⚙</span> Paramètres de démo</button>
+  <a class="navitem" href="/" target="_self"><span class="navicon">↗</span> Voir le site vitrine</a>
+ </nav>
+ <div class="sidebar-bottom"><div class="small-dot"></div><div><strong>Démonstration interactive</strong><small>Aucune donnée client réelle. Les modifications restent dans ce navigateur.</small></div></div>
+</aside>
+<div class="overlay" id="overlay"></div>
+<div class="main">
+<header class="topbar"><div class="top-heading"><span class="crumb">DOM RÉNOVATION</span><span class="chev">/</span><span id="crumbCurrent">Vue d'ensemble</span></div><div class="top-actions"><a class="ghost-link" href="/" target="_self">Voir le site <span aria-hidden="true">↗</span></a><span class="demo-tag">MODE DÉMO</span><div class="avatar">DOM</div></div></header>
+<main class="content">
+<div class="callout"><strong>Démonstration non officielle</strong> — cet espace illustre un futur outil de gestion. Les données sont fictives ou saisies localement, sans compte client, serveur ni envoi automatique. <button id="resetLink">Réinitialiser les exemples</button></div>
+<section id="page-accueil" class="page active">
+ <div class="page-title"><div><div class="eyebrow">VOTRE TABLEAU DE BORD</div><h1>Bonjour, bienvenue chez <span>DOM RÉNOVATION.</span></h1><p>Retrouvez votre activité en un coup d'œil, du premier contact au devis.</p></div><button class="primary" data-action="new-request"><span>＋</span> Nouvelle demande</button></div>
+ <div class="kpis" id="kpis">
+  <div class="kpi"><div class="kpi-top"><span>Demandes reçues</span><span class="kpi-symbol">↗</span></div><strong id="statRequests">0</strong><small>Dans cet espace de démo</small></div>
+  <div class="kpi"><div class="kpi-top"><span>À traiter</span><span class="kpi-symbol orange">◷</span></div><strong id="statPending">0</strong><small>Demandes à rappeler</small></div>
+  <div class="kpi"><div class="kpi-top"><span>Devis préparés</span><span class="kpi-symbol blue">▤</span></div><strong id="statQuotes">0</strong><small>Documents dans la démo</small></div>
+  <div class="kpi"><div class="kpi-top"><span>Montant des devis</span><span class="kpi-symbol green">€</span></div><strong id="statValue">0 €</strong><small>Somme indicative, non encaissée</small></div>
+ </div>
+ <div class="feature"><div><div class="eyebrow light">UN OUTIL QUI VOUS RESSEMBLE</div><h2>Vos chantiers et vos clients,<br>au même endroit.</h2><p>Gardez la main sur les demandes, les contacts et la préparation de vos devis.</p><button class="whitebtn" data-page="demandes">Explorer les demandes <span>→</span></button></div><div class="feature-photo" role="img" aria-label="Artisans travaillant sur une toiture"></div></div>
+ <div class="twocol"><section class="panel"><div class="panel-head"><div><h3>Dernières demandes</h3><p>Exemples modifiables pour tester l'interface</p></div><button class="text-btn" data-page="demandes">Voir tout →</button></div><div id="recentRequests"></div></section><section class="panel"><div class="panel-head"><div><h3>Accès rapide</h3><p>Essayez les fonctions de démonstration</p></div></div><div class="quick"><button data-action="new-request"><span class="quickglyph">＋</span><span><strong>Créer une demande</strong><small>Ajouter un prospect fictif</small></span><b>→</b></button><button data-page="clients"><span class="quickglyph">♙</span><span><strong>Gérer les clients</strong><small>Rechercher et modifier un contact</small></span><b>→</b></button><button data-action="new-quote"><span class="quickglyph">▤</span><span><strong>Préparer un devis</strong><small>Calculer et imprimer un document</small></span><b>→</b></button><button data-page="prestations"><span class="quickglyph">▣</span><span><strong>Voir les prestations</strong><small>Consulter votre catalogue exemple</small></span><b>→</b></button></div></section></div>
+</section>
+<section id="page-demandes" class="page"><div class="page-title"><div><div class="eyebrow">SUIVI COMMERCIAL</div><h1>Demandes de devis</h1><p>Organisez les prospects et suivez l'avancement de chaque demande.</p></div><button class="primary" data-action="new-request">＋ Ajouter une demande</button></div><div class="panel table-panel"><div class="toolbar"><input class="search" id="requestSearch" type="search" placeholder="Rechercher nom, prestation, commune…"><select id="requestFilter"><option value="tous">Tous les statuts</option><option value="Nouveau">Nouveau</option><option value="En cours">En cours</option><option value="Traité">Traité</option></select></div><div class="tablewrap"><table><thead><tr><th>Contact</th><th>Prestation</th><th>Date</th><th>Statut</th><th>Actions</th></tr></thead><tbody id="requestRows"></tbody></table></div><div class="table-foot">Les changements sont conservés localement dans ce navigateur uniquement.</div></div></section>
+<section id="page-clients" class="page"><div class="page-title"><div><div class="eyebrow">CARNET D'ADRESSES</div><h1>Clients et contacts</h1><p>Un seul endroit pour retrouver vos interlocuteurs.</p></div><button class="primary" data-action="new-client">＋ Nouveau contact</button></div><div class="panel table-panel"><div class="toolbar"><input class="search" id="clientSearch" type="search" placeholder="Rechercher un client…"><span class="mini-note">Exemples fictifs</span></div><div class="tablewrap"><table><thead><tr><th>Nom</th><th>Commune</th><th>Téléphone</th><th>Projet</th><th>Actions</th></tr></thead><tbody id="clientRows"></tbody></table></div></div></section>
+<section id="page-devis" class="page"><div class="page-title"><div><div class="eyebrow">DOCUMENTS COMMERCIAUX</div><h1>Mes devis</h1><p>Préparez des estimations lisibles et imprimez-les. Aucun envoi réel depuis cette démo.</p></div><button class="primary" data-action="new-quote">＋ Créer un devis</button></div><div class="panel table-panel"><div class="tablewrap"><table><thead><tr><th>Référence</th><th>Client</th><th>Prestation</th><th>Montant indicatif</th><th>Actions</th></tr></thead><tbody id="quoteRows"></tbody></table></div><div class="table-foot">Maquettes de devis uniquement : identité légale, mentions fiscales et conditions seront à valider avant usage professionnel.</div></div></section>
+<section id="page-prestations" class="page"><div class="page-title"><div><div class="eyebrow">VOS SAVOIR-FAIRE</div><h1>Prestations</h1><p>Un aperçu des catégories de travaux proposées sur le site vitrine.</p></div><a class="secondary" href="/" target="_self">Voir le site ↗</a></div><div class="servicegrid"><article class="servicecard"><img src="../images/toiture.jpg" alt="Plâtrerie intérieure"><div><h3>Plâtrerie & enduits</h3><p>Nettoyage et entretien des couvertures.</p><button data-quote-service="Plâtrerie et enduits">Préparer un devis →</button></div></article><article class="servicecard"><img src="../images/facade.jpg" alt="Pose de cloisons"><div><h3>Cloisons & placo</h3><p>Remise en valeur de l'extérieur du bâtiment.</p><button data-quote-service="Cloisons et placo">Préparer un devis →</button></div></article><article class="servicecard"><img src="../images/maconnerie.jpg" alt="Rénovation intérieure"><div><h3>Plafonds et doublages</h3><p>Réparations et aménagements maçonnés.</p><button data-quote-service="Plafonds et doublages">Préparer un devis →</button></div></article><article class="servicecard"><img src="../images/exterieur.jpg" alt="Finitions de murs"><div><h3>Finitions et rénovation</h3><p>Entretien des espaces autour de l'habitat.</p><button data-quote-service="Finitions et rénovation">Préparer un devis →</button></div></article></div></section>
+<section id="page-parametres" class="page"><div class="page-title"><div><div class="eyebrow">DÉMONSTRATION</div><h1>Paramètres et données</h1><p>Comprendre le fonctionnement de cette maquette interactive.</p></div></div><div class="panel settings"><h3>Ce qui fonctionne aujourd'hui</h3><p>Créer, rechercher et modifier des demandes et des contacts. Préparer et imprimer des exemples de devis. Exporter les données fictives en JSON. Les données sont enregistrées <strong>dans votre navigateur uniquement</strong>.</p><h3>Ce qu'il faudra raccorder après acceptation</h3><p>Connexion sécurisée, stockage serveur, emails, réception automatique des demandes, vrais clients, devis juridiquement conformes et facturation : ces fonctionnalités <strong>ne sont pas actives</strong> dans cette démonstration.</p><div class="settings-actions"><button class="secondary" id="exportData">Exporter les données démo</button><button class="danger" id="resetData">Réinitialiser les données de démonstration</button></div></div></section>
+</main>
+<div class="footnote"><span>DOM RÉNOVATION • Espace de démonstration non officiel</span><span>Version commerciale de présentation — aucune connexion à des données réelles</span></div>
+</div></div>
+<div class="modal-backdrop" id="modalBackdrop" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-top"><div><div class="eyebrow" id="modalEyebrow">DÉMONSTRATION</div><h2 id="modalTitle">Nouvelle demande</h2></div><button class="modal-close" id="modalClose" aria-label="Fermer">×</button></div><div id="modalBody"></div></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js" defer></script>
+</body>
+</html>
